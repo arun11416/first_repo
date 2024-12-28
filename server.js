@@ -4,9 +4,11 @@ const db=require('./db')
 const Person=require('./models/schems')
 const bodyParser=require('body-parser')
 const personroute= require('./Routes/personRoutes')
+require('dotenv').config()
 const app= express()
 app.use(bodyParser.json())
 
+const PORT= process.env.PORT || 3000
 
 app.get('/',(req,res)=>{
     res.send('yes,it is working')
@@ -14,7 +16,7 @@ app.get('/',(req,res)=>{
 
 app.use('/person',personroute)
 
-app.listen(3000,()=>{
+app.listen(PORT,()=>{
     console.log("connected to server succesfully")
 })
 
