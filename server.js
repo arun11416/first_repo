@@ -1,4 +1,4 @@
-
+// basic node project
 const express= require('express')
 const db=require('./db')
 const Person=require('./models/schems')
