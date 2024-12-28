@@ -1,0 +1,5 @@
+
+# This will ignore node_module file
+
+
+node_module/
