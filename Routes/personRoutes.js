@@ -14,10 +14,10 @@ routes.post('/',async(req,res)=>{
     const response= await newPerson.save()
 
     console.log("data entered sucessfully")
-    res.status(500).json(response)
+    res.status(200).json(response)
     }catch{
         console.log("internal server error")
-        res.status(200).json({err:"internal server error"})
+        res.status(500).json({err:"internal server error"})
     }
 })
 

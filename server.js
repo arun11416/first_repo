@@ -14,6 +14,11 @@ app.get('/',(req,res)=>{
     res.send('yes,it is working')
 })
 
+app.get('/newpage',(req,res)=>{
+    res.send("this is the second page ")
+})
+
+
 app.use('/person',personroute)
 
 app.listen(PORT,()=>{
